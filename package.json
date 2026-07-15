@@ -1,0 +1,48 @@
+{
+  "name": "task-analysis-assessment-engine",
+  "version": "0.1.0",
+  "description": "Deterministic, rule-based, explainable Task Analysis Assessment Engine for special education — universal TypeScript module (Node, browser, Next.js, Deno, edge runtimes).",
+  "keywords": [
+    "special-education",
+    "task-analysis",
+    "iep",
+    "aba",
+    "assessment-engine",
+    "rule-based",
+    "explainable-ai"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./node": {
+      "types": "./dist/node.d.ts",
+      "import": "./dist/node.js",
+      "require": "./dist/node.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": ["dist", "README.md", "ARCHITECTURE.md", "LICENSE"],
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.6.3",
+    "vitest": "^4.1.10"
+  }
+}
